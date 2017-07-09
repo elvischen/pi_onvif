@@ -1,13 +1,13 @@
 ##### End of variables to change
 
-v16_12_DIR = v16_12
+v16_14_DIR = v16_14
 
 all:
-	cd $(v16_12_DIR) ; $(MAKE)
+	cd $(v16_14_DIR) ; $(MAKE)
 	@echo
 
 clean:
-	cd $(v16_12_DIR) ; $(MAKE) clean
+	cd $(v16_14_DIR) ; $(MAKE) clean
 
 distclean: clean
-	-rm -f $(v16_12_DIR)/Makefile
+	-rm -f $(v16_14_DIR)/Makefile
