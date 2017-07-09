@@ -10,30 +10,12 @@ all:	$(ALL)
 .$(CPP).$(OBJ):
 	$(CPLUSPLUS_COMPILER) -c $(CPLUSPLUS_FLAGS) $<
 
-ONVIF_SERVER_OBJS = onvif_main.$(OBJ) onvif_api.$(OBJ) onvif_devicemgmt.$(OBJ) onvif_event.$(OBJ) onvif_media.$(OBJ) onvif_media2.$(OBJ) onvif_imaging.$(OBJ) onvif_deviceio.$(OBJ) onvif_display.$(OBJ) onvif_advancedsecurity.$(OBJ) onvif_analytics.$(OBJ) onvif_analyticsdevice.$(OBJ) onvif_credential.$(OBJ) onvif_provisioning.$(OBJ) onvif_ptz.$(OBJ) onvif_receiver.$(OBJ) onvif_recording.$(OBJ) onvif_replay.$(OBJ) onvif_schedule.$(OBJ) onvif_search.$(OBJ) onvif_thermal.$(OBJ) 
+ONVIF_SERVER_OBJS = onvif_main.$(OBJ) onvif_api.$(OBJ) onvif_devicemgmt.$(OBJ) 
 
 onvif_main.$(C): include/onvifStub.h
 onvif_devicemgmt.$(C): include/onvifStub.h
-onvif_event.$(C): include/onvifStub.h
-onvif_media.$(C): include/onvifStub.h
-onvif_media2.$(C): include/onvifStub.h
-onvif_imaging.$(C): include/onvifStub.h
-onvif_deviceio.$(C): include/onvifStub.h
-onvif_display.$(C): include/onvifStub.h
-onvif_advancedsecurity.$(C): include/onvifStub.h
-onvif_analytics.$(C): include/onvifStub.h
-onvif_analyticsdevice.$(C): include/onvifStub.h
-onvif_credential.$(C): include/onvifStub.h
-onvif_provisioning.$(C): include/onvifStub.h
-onvif_ptz.$(C): include/onvifStub.h
-onvif_receiver.$(C): include/onvifStub.h
-onvif_recording.$(C): include/onvifStub.h
-onvif_replay.$(C): include/onvifStub.h
-onvif_schedule.$(C): include/onvifStub.h
-onvif_search.$(C): include/onvifStub.h
-onvif_thermal.$(C): include/onvifStub.h
 
-ONVIF_ORG_DIR = ../../onvif_org_lib/v16_12
+ONVIF_ORG_DIR = ../../onvif_org_lib/v16_14
 ONVIF_ORG_LIB = $(ONVIF_ORG_DIR)/libonvif_org.$(libonviforg_LIB_SUFFIX)
 LOCAL_LIBS = $(ONVIF_ORG_LIB)
 LIBS = $(LOCAL_LIBS) $(LIBS_FOR_CONSOLE_APPLICATION)

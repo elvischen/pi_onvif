@@ -1,13 +1,13 @@
 ##### End of variables to change
 
-onvif_server_v1612_DIR = onvif_server_v16.12
+onvif_server_v1614_DIR = onvif_server_v16.14
 
 all:
-	cd $(onvif_server_v1612_DIR) ; $(MAKE)
+	cd $(onvif_server_v1614_DIR) ; $(MAKE)
 	@echo
 
 clean:
-	cd $(onvif_server_v1612_DIR) ; $(MAKE) clean
+	cd $(onvif_server_v1614_DIR) ; $(MAKE) clean
 
 distclean: clean
-	-rm -f $(onvif_server_v1612_DIR)/Makefile
+	-rm -f $(onvif_server_v1614_DIR)/Makefile
