@@ -1,0 +1,13 @@
+##### End of variables to change
+
+onvif_server_v1612_DIR = onvif_server_v16.12
+
+all:
+	cd $(onvif_server_v1612_DIR) ; $(MAKE)
+	@echo
+
+clean:
+	cd $(onvif_server_v1612_DIR) ; $(MAKE) clean
+
+distclean: clean
+	-rm -f $(onvif_server_v1612_DIR)/Makefile

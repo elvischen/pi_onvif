@@ -1,0 +1,13 @@
+##### End of variables to change
+
+v16_12_DIR = v16_12
+
+all:
+	cd $(v16_12_DIR) ; $(MAKE)
+	@echo
+
+clean:
+	cd $(v16_12_DIR) ; $(MAKE) clean
+
+distclean: clean
+	-rm -f $(v16_12_DIR)/Makefile

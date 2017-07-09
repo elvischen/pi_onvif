@@ -1,0 +1,3 @@
+INCLUDES = -Iinclude
+libonviforg_LIB_SUFFIX = $(LIB_SUFFIX)
+##### Change the following for your environment:

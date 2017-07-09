@@ -1,0 +1,30 @@
+##### End of variables to change
+
+NAME = libonvif_org
+ONVIF_ORG_LIB = $(NAME).$(LIB_SUFFIX)
+ALL = $(ONVIF_ORG_LIB)
+all:	$(ALL)
+
+OBJS = onvifC.$(OBJ) onvifServer.$(OBJ) onvifClient.$(OBJ) duration.$(OBJ) stdsoap2.$(OBJ)
+
+$(ONVIF_ORG_LIB): $(OBJS)
+	$(LIBRARY_LINK)$@ $(LIBRARY_LINK_OPTS) $(OBJS)
+
+.$(C).$(OBJ):
+	$(C_COMPILER) -c $(C_FLAGS) $<
+
+.$(CPP).$(OBJ):
+	$(CPLUSPLUS_COMPILER) -c $(CPLUSPLUS_FLAGS) $<
+
+onvifServer.$(C): include/onvifH.h
+include/onvifH.h: include/onvifStub.h 
+include/onvifStub.h: include/stdsoap2.h
+onvifClient.$(C): include/onvifH.h
+onvifC.$(C): include/onvifH.h
+stdsoap2.$(C): include/stdsoap2.h
+duration.$(C): include/onvifH.h
+
+clean:
+	-rm -rf *.$(OBJ)
+
+##### Any additional, platform-specific rules come here:
