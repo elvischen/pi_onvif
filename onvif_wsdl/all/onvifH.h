@@ -126,6 +126,56 @@ SOAP_FMAC3 int * SOAP_FMAC4 soap_get_tt__IANA_IfTypes(struct soap*, int *, const
 
 #endif
 
+#ifndef SOAP_TYPE_tt__NetworkInterfaceConfigPriority_DEFINED
+#define SOAP_TYPE_tt__NetworkInterfaceConfigPriority_DEFINED
+
+#ifdef SOAP_DEFAULT_tt__NetworkInterfaceConfigPriority
+#define soap_default_tt__NetworkInterfaceConfigPriority(soap, a) (*(a) = SOAP_DEFAULT_tt__NetworkInterfaceConfigPriority)
+#else
+#define soap_default_tt__NetworkInterfaceConfigPriority(soap, a) (*(a) = (int)0)
+#endif
+
+#define soap_tt__NetworkInterfaceConfigPriority2s soap_int2s
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_tt__NetworkInterfaceConfigPriority(struct soap*, const char*, int, const int *, const char*);
+SOAP_FMAC3S int SOAP_FMAC4S soap_s2tt__NetworkInterfaceConfigPriority(struct soap*, const char*, int *);
+SOAP_FMAC3 int * SOAP_FMAC4 soap_in_tt__NetworkInterfaceConfigPriority(struct soap*, const char*, int *, const char*);
+#define soap_new_tt__NetworkInterfaceConfigPriority soap_new_int
+
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_tt__NetworkInterfaceConfigPriority(struct soap*, const int *, const char*, const char*);
+
+#ifndef soap_write_tt__NetworkInterfaceConfigPriority
+#define soap_write_tt__NetworkInterfaceConfigPriority(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_tt__NetworkInterfaceConfigPriority(soap, data, "tt:NetworkInterfaceConfigPriority", "") || soap_end_send(soap), (soap)->error )
+#endif
+
+
+#ifndef soap_PUT_tt__NetworkInterfaceConfigPriority
+#define soap_PUT_tt__NetworkInterfaceConfigPriority(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_tt__NetworkInterfaceConfigPriority(soap, data, "tt:NetworkInterfaceConfigPriority", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_send_tt__NetworkInterfaceConfigPriority
+#define soap_POST_send_tt__NetworkInterfaceConfigPriority(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_tt__NetworkInterfaceConfigPriority(soap, data, "tt:NetworkInterfaceConfigPriority", "") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 int * SOAP_FMAC4 soap_get_tt__NetworkInterfaceConfigPriority(struct soap*, int *, const char*, const char*);
+
+#ifndef soap_read_tt__NetworkInterfaceConfigPriority
+#define soap_read_tt__NetworkInterfaceConfigPriority(soap, data) ( soap_begin_recv(soap) || !soap_get_tt__NetworkInterfaceConfigPriority(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#endif
+
+
+#ifndef soap_GET_tt__NetworkInterfaceConfigPriority
+#define soap_GET_tt__NetworkInterfaceConfigPriority(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_tt__NetworkInterfaceConfigPriority(soap, (data)), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_recv_tt__NetworkInterfaceConfigPriority
+#define soap_POST_recv_tt__NetworkInterfaceConfigPriority(soap, data) ( soap_read_tt__NetworkInterfaceConfigPriority(soap, (data)) || soap_closesock(soap), (soap)->error )
+#endif
+
+#endif
+
 #ifndef SOAP_TYPE_int_DEFINED
 #define SOAP_TYPE_int_DEFINED
 
@@ -3705,50 +3755,50 @@ SOAP_FMAC3 enum tds__AutoGeoModes * SOAP_FMAC4 soap_get_tds__AutoGeoModes(struct
 
 #endif
 
-#ifndef SOAP_TYPE_xsd__boolean_DEFINED
-#define SOAP_TYPE_xsd__boolean_DEFINED
+#ifndef SOAP_TYPE_xsd__boolean__DEFINED
+#define SOAP_TYPE_xsd__boolean__DEFINED
 
-#ifdef SOAP_DEFAULT_xsd__boolean
-#define soap_default_xsd__boolean(soap, a) (*(a) = SOAP_DEFAULT_xsd__boolean)
+#ifdef SOAP_DEFAULT_xsd__boolean_
+#define soap_default_xsd__boolean_(soap, a) (*(a) = SOAP_DEFAULT_xsd__boolean_)
 #else
-#define soap_default_xsd__boolean(soap, a) (*(a) = (enum xsd__boolean)0)
+#define soap_default_xsd__boolean_(soap, a) (*(a) = (enum xsd__boolean_)0)
 #endif
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_xsd__boolean(struct soap*, const char*, int, const enum xsd__boolean *, const char*);
-SOAP_FMAC3S const char* SOAP_FMAC4S soap_xsd__boolean2s(struct soap*, enum xsd__boolean);
-SOAP_FMAC3 enum xsd__boolean * SOAP_FMAC4 soap_in_xsd__boolean(struct soap*, const char*, enum xsd__boolean *, const char*);
-SOAP_FMAC3S int SOAP_FMAC4S soap_s2xsd__boolean(struct soap*, const char*, enum xsd__boolean *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_xsd__boolean_(struct soap*, const char*, int, const enum xsd__boolean_ *, const char*);
+SOAP_FMAC3S const char* SOAP_FMAC4S soap_xsd__boolean_2s(struct soap*, enum xsd__boolean_);
+SOAP_FMAC3 enum xsd__boolean_ * SOAP_FMAC4 soap_in_xsd__boolean_(struct soap*, const char*, enum xsd__boolean_ *, const char*);
+SOAP_FMAC3S int SOAP_FMAC4S soap_s2xsd__boolean_(struct soap*, const char*, enum xsd__boolean_ *);
 
-SOAP_FMAC3 enum xsd__boolean * SOAP_FMAC4 soap_new_xsd__boolean(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_xsd__boolean(struct soap*, const enum xsd__boolean *, const char*, const char*);
+SOAP_FMAC3 enum xsd__boolean_ * SOAP_FMAC4 soap_new_xsd__boolean_(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_xsd__boolean_(struct soap*, const enum xsd__boolean_ *, const char*, const char*);
 
-#ifndef soap_write_xsd__boolean
-#define soap_write_xsd__boolean(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_xsd__boolean(soap, data, "xsd:boolean", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_xsd__boolean
-#define soap_PUT_xsd__boolean(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_xsd__boolean(soap, data, "xsd:boolean", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_write_xsd__boolean_
+#define soap_write_xsd__boolean_(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_xsd__boolean_(soap, data, "xsd:boolean", "") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send_xsd__boolean
-#define soap_POST_send_xsd__boolean(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_xsd__boolean(soap, data, "xsd:boolean", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 enum xsd__boolean * SOAP_FMAC4 soap_get_xsd__boolean(struct soap*, enum xsd__boolean *, const char*, const char*);
-
-#ifndef soap_read_xsd__boolean
-#define soap_read_xsd__boolean(soap, data) ( soap_begin_recv(soap) || !soap_get_xsd__boolean(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#ifndef soap_PUT_xsd__boolean_
+#define soap_PUT_xsd__boolean_(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_xsd__boolean_(soap, data, "xsd:boolean", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_GET_xsd__boolean
-#define soap_GET_xsd__boolean(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_xsd__boolean(soap, (data)), (soap)->error )
+#ifndef soap_POST_send_xsd__boolean_
+#define soap_POST_send_xsd__boolean_(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_xsd__boolean_(soap, data, "xsd:boolean", "") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 enum xsd__boolean_ * SOAP_FMAC4 soap_get_xsd__boolean_(struct soap*, enum xsd__boolean_ *, const char*, const char*);
+
+#ifndef soap_read_xsd__boolean_
+#define soap_read_xsd__boolean_(soap, data) ( soap_begin_recv(soap) || !soap_get_xsd__boolean_(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv_xsd__boolean
-#define soap_POST_recv_xsd__boolean(soap, data) ( soap_read_xsd__boolean(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_GET_xsd__boolean_
+#define soap_GET_xsd__boolean_(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_xsd__boolean_(soap, (data)), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_recv_xsd__boolean_
+#define soap_POST_recv_xsd__boolean_(soap, data) ( soap_read_xsd__boolean_(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
@@ -12159,170 +12209,170 @@ SOAP_FMAC3 struct wstop__Documentation * SOAP_FMAC4 soap_get_wstop__Documentatio
 
 #endif
 
-#ifndef SOAP_TYPE__wsrfbf__BaseFaultType_FaultCause_DEFINED
-#define SOAP_TYPE__wsrfbf__BaseFaultType_FaultCause_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__wsrfbf__BaseFaultType_FaultCause(struct soap*, struct _wsrfbf__BaseFaultType_FaultCause *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__wsrfbf__BaseFaultType_FaultCause(struct soap*, const struct _wsrfbf__BaseFaultType_FaultCause *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__wsrfbf__BaseFaultType_FaultCause(struct soap*, const char*, int, const struct _wsrfbf__BaseFaultType_FaultCause *, const char*);
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_FaultCause * SOAP_FMAC4 soap_in__wsrfbf__BaseFaultType_FaultCause(struct soap*, const char*, struct _wsrfbf__BaseFaultType_FaultCause *, const char*);
+#ifndef SOAP_TYPE__wsbf2__BaseFaultType_FaultCause_DEFINED
+#define SOAP_TYPE__wsbf2__BaseFaultType_FaultCause_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_default__wsbf2__BaseFaultType_FaultCause(struct soap*, struct _wsbf2__BaseFaultType_FaultCause *);
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__wsbf2__BaseFaultType_FaultCause(struct soap*, const struct _wsbf2__BaseFaultType_FaultCause *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out__wsbf2__BaseFaultType_FaultCause(struct soap*, const char*, int, const struct _wsbf2__BaseFaultType_FaultCause *, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_FaultCause * SOAP_FMAC4 soap_in__wsbf2__BaseFaultType_FaultCause(struct soap*, const char*, struct _wsbf2__BaseFaultType_FaultCause *, const char*);
 
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_FaultCause * SOAP_FMAC4 soap_new__wsrfbf__BaseFaultType_FaultCause(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__wsrfbf__BaseFaultType_FaultCause(struct soap*, const struct _wsrfbf__BaseFaultType_FaultCause *, const char*, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_FaultCause * SOAP_FMAC4 soap_new__wsbf2__BaseFaultType_FaultCause(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put__wsbf2__BaseFaultType_FaultCause(struct soap*, const struct _wsbf2__BaseFaultType_FaultCause *, const char*, const char*);
 
-#ifndef soap_write__wsrfbf__BaseFaultType_FaultCause
-#define soap_write__wsrfbf__BaseFaultType_FaultCause(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__wsrfbf__BaseFaultType_FaultCause(soap, data), 0) || soap_put__wsrfbf__BaseFaultType_FaultCause(soap, data, "wsrfbf:BaseFaultType-FaultCause", "") || soap_end_send(soap), (soap)->error )
+#ifndef soap_write__wsbf2__BaseFaultType_FaultCause
+#define soap_write__wsbf2__BaseFaultType_FaultCause(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__wsbf2__BaseFaultType_FaultCause(soap, data), 0) || soap_put__wsbf2__BaseFaultType_FaultCause(soap, data, "wsbf2:BaseFaultType-FaultCause", "") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_PUT__wsrfbf__BaseFaultType_FaultCause
-#define soap_PUT__wsrfbf__BaseFaultType_FaultCause(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__wsrfbf__BaseFaultType_FaultCause(soap, data), 0) || soap_put__wsrfbf__BaseFaultType_FaultCause(soap, data, "wsrfbf:BaseFaultType-FaultCause", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_PUT__wsbf2__BaseFaultType_FaultCause
+#define soap_PUT__wsbf2__BaseFaultType_FaultCause(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__wsbf2__BaseFaultType_FaultCause(soap, data), 0) || soap_put__wsbf2__BaseFaultType_FaultCause(soap, data, "wsbf2:BaseFaultType-FaultCause", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send__wsrfbf__BaseFaultType_FaultCause
-#define soap_POST_send__wsrfbf__BaseFaultType_FaultCause(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__wsrfbf__BaseFaultType_FaultCause(soap, data), 0) || soap_put__wsrfbf__BaseFaultType_FaultCause(soap, data, "wsrfbf:BaseFaultType-FaultCause", "") || soap_end_send(soap), (soap)->error )
+#ifndef soap_POST_send__wsbf2__BaseFaultType_FaultCause
+#define soap_POST_send__wsbf2__BaseFaultType_FaultCause(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__wsbf2__BaseFaultType_FaultCause(soap, data), 0) || soap_put__wsbf2__BaseFaultType_FaultCause(soap, data, "wsbf2:BaseFaultType-FaultCause", "") || soap_end_send(soap), (soap)->error )
 #endif
 
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_FaultCause * SOAP_FMAC4 soap_get__wsrfbf__BaseFaultType_FaultCause(struct soap*, struct _wsrfbf__BaseFaultType_FaultCause *, const char*, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_FaultCause * SOAP_FMAC4 soap_get__wsbf2__BaseFaultType_FaultCause(struct soap*, struct _wsbf2__BaseFaultType_FaultCause *, const char*, const char*);
 
-#ifndef soap_read__wsrfbf__BaseFaultType_FaultCause
-#define soap_read__wsrfbf__BaseFaultType_FaultCause(soap, data) ( ((data) ? (soap_default__wsrfbf__BaseFaultType_FaultCause(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__wsrfbf__BaseFaultType_FaultCause(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__wsrfbf__BaseFaultType_FaultCause
-#define soap_GET__wsrfbf__BaseFaultType_FaultCause(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__wsrfbf__BaseFaultType_FaultCause(soap, (data)), (soap)->error )
+#ifndef soap_read__wsbf2__BaseFaultType_FaultCause
+#define soap_read__wsbf2__BaseFaultType_FaultCause(soap, data) ( ((data) ? (soap_default__wsbf2__BaseFaultType_FaultCause(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__wsbf2__BaseFaultType_FaultCause(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv__wsrfbf__BaseFaultType_FaultCause
-#define soap_POST_recv__wsrfbf__BaseFaultType_FaultCause(soap, data) ( soap_read__wsrfbf__BaseFaultType_FaultCause(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE__wsrfbf__BaseFaultType_Description_DEFINED
-#define SOAP_TYPE__wsrfbf__BaseFaultType_Description_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__wsrfbf__BaseFaultType_Description(struct soap*, struct _wsrfbf__BaseFaultType_Description *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__wsrfbf__BaseFaultType_Description(struct soap*, const struct _wsrfbf__BaseFaultType_Description *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__wsrfbf__BaseFaultType_Description(struct soap*, const char*, int, const struct _wsrfbf__BaseFaultType_Description *, const char*);
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_Description * SOAP_FMAC4 soap_in__wsrfbf__BaseFaultType_Description(struct soap*, const char*, struct _wsrfbf__BaseFaultType_Description *, const char*);
-
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_Description * SOAP_FMAC4 soap_new__wsrfbf__BaseFaultType_Description(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__wsrfbf__BaseFaultType_Description(struct soap*, const struct _wsrfbf__BaseFaultType_Description *, const char*, const char*);
-
-#ifndef soap_write__wsrfbf__BaseFaultType_Description
-#define soap_write__wsrfbf__BaseFaultType_Description(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__wsrfbf__BaseFaultType_Description(soap, data), 0) || soap_put__wsrfbf__BaseFaultType_Description(soap, data, "wsrfbf:BaseFaultType-Description", "") || soap_end_send(soap), (soap)->error )
+#ifndef soap_GET__wsbf2__BaseFaultType_FaultCause
+#define soap_GET__wsbf2__BaseFaultType_FaultCause(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__wsbf2__BaseFaultType_FaultCause(soap, (data)), (soap)->error )
 #endif
 
 
-#ifndef soap_PUT__wsrfbf__BaseFaultType_Description
-#define soap_PUT__wsrfbf__BaseFaultType_Description(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__wsrfbf__BaseFaultType_Description(soap, data), 0) || soap_put__wsrfbf__BaseFaultType_Description(soap, data, "wsrfbf:BaseFaultType-Description", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send__wsrfbf__BaseFaultType_Description
-#define soap_POST_send__wsrfbf__BaseFaultType_Description(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__wsrfbf__BaseFaultType_Description(soap, data), 0) || soap_put__wsrfbf__BaseFaultType_Description(soap, data, "wsrfbf:BaseFaultType-Description", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_Description * SOAP_FMAC4 soap_get__wsrfbf__BaseFaultType_Description(struct soap*, struct _wsrfbf__BaseFaultType_Description *, const char*, const char*);
-
-#ifndef soap_read__wsrfbf__BaseFaultType_Description
-#define soap_read__wsrfbf__BaseFaultType_Description(soap, data) ( ((data) ? (soap_default__wsrfbf__BaseFaultType_Description(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__wsrfbf__BaseFaultType_Description(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__wsrfbf__BaseFaultType_Description
-#define soap_GET__wsrfbf__BaseFaultType_Description(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__wsrfbf__BaseFaultType_Description(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv__wsrfbf__BaseFaultType_Description
-#define soap_POST_recv__wsrfbf__BaseFaultType_Description(soap, data) ( soap_read__wsrfbf__BaseFaultType_Description(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_POST_recv__wsbf2__BaseFaultType_FaultCause
+#define soap_POST_recv__wsbf2__BaseFaultType_FaultCause(soap, data) ( soap_read__wsbf2__BaseFaultType_FaultCause(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
 
-#ifndef SOAP_TYPE__wsrfbf__BaseFaultType_ErrorCode_DEFINED
-#define SOAP_TYPE__wsrfbf__BaseFaultType_ErrorCode_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default__wsrfbf__BaseFaultType_ErrorCode(struct soap*, struct _wsrfbf__BaseFaultType_ErrorCode *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__wsrfbf__BaseFaultType_ErrorCode(struct soap*, const struct _wsrfbf__BaseFaultType_ErrorCode *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out__wsrfbf__BaseFaultType_ErrorCode(struct soap*, const char*, int, const struct _wsrfbf__BaseFaultType_ErrorCode *, const char*);
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_ErrorCode * SOAP_FMAC4 soap_in__wsrfbf__BaseFaultType_ErrorCode(struct soap*, const char*, struct _wsrfbf__BaseFaultType_ErrorCode *, const char*);
+#ifndef SOAP_TYPE__wsbf2__BaseFaultType_Description_DEFINED
+#define SOAP_TYPE__wsbf2__BaseFaultType_Description_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_default__wsbf2__BaseFaultType_Description(struct soap*, struct _wsbf2__BaseFaultType_Description *);
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__wsbf2__BaseFaultType_Description(struct soap*, const struct _wsbf2__BaseFaultType_Description *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out__wsbf2__BaseFaultType_Description(struct soap*, const char*, int, const struct _wsbf2__BaseFaultType_Description *, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_Description * SOAP_FMAC4 soap_in__wsbf2__BaseFaultType_Description(struct soap*, const char*, struct _wsbf2__BaseFaultType_Description *, const char*);
 
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_ErrorCode * SOAP_FMAC4 soap_new__wsrfbf__BaseFaultType_ErrorCode(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put__wsrfbf__BaseFaultType_ErrorCode(struct soap*, const struct _wsrfbf__BaseFaultType_ErrorCode *, const char*, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_Description * SOAP_FMAC4 soap_new__wsbf2__BaseFaultType_Description(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put__wsbf2__BaseFaultType_Description(struct soap*, const struct _wsbf2__BaseFaultType_Description *, const char*, const char*);
 
-#ifndef soap_write__wsrfbf__BaseFaultType_ErrorCode
-#define soap_write__wsrfbf__BaseFaultType_ErrorCode(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__wsrfbf__BaseFaultType_ErrorCode(soap, data), 0) || soap_put__wsrfbf__BaseFaultType_ErrorCode(soap, data, "wsrfbf:BaseFaultType-ErrorCode", "") || soap_end_send(soap), (soap)->error )
+#ifndef soap_write__wsbf2__BaseFaultType_Description
+#define soap_write__wsbf2__BaseFaultType_Description(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__wsbf2__BaseFaultType_Description(soap, data), 0) || soap_put__wsbf2__BaseFaultType_Description(soap, data, "wsbf2:BaseFaultType-Description", "") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_PUT__wsrfbf__BaseFaultType_ErrorCode
-#define soap_PUT__wsrfbf__BaseFaultType_ErrorCode(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__wsrfbf__BaseFaultType_ErrorCode(soap, data), 0) || soap_put__wsrfbf__BaseFaultType_ErrorCode(soap, data, "wsrfbf:BaseFaultType-ErrorCode", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_PUT__wsbf2__BaseFaultType_Description
+#define soap_PUT__wsbf2__BaseFaultType_Description(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__wsbf2__BaseFaultType_Description(soap, data), 0) || soap_put__wsbf2__BaseFaultType_Description(soap, data, "wsbf2:BaseFaultType-Description", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send__wsrfbf__BaseFaultType_ErrorCode
-#define soap_POST_send__wsrfbf__BaseFaultType_ErrorCode(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__wsrfbf__BaseFaultType_ErrorCode(soap, data), 0) || soap_put__wsrfbf__BaseFaultType_ErrorCode(soap, data, "wsrfbf:BaseFaultType-ErrorCode", "") || soap_end_send(soap), (soap)->error )
+#ifndef soap_POST_send__wsbf2__BaseFaultType_Description
+#define soap_POST_send__wsbf2__BaseFaultType_Description(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__wsbf2__BaseFaultType_Description(soap, data), 0) || soap_put__wsbf2__BaseFaultType_Description(soap, data, "wsbf2:BaseFaultType-Description", "") || soap_end_send(soap), (soap)->error )
 #endif
 
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_ErrorCode * SOAP_FMAC4 soap_get__wsrfbf__BaseFaultType_ErrorCode(struct soap*, struct _wsrfbf__BaseFaultType_ErrorCode *, const char*, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_Description * SOAP_FMAC4 soap_get__wsbf2__BaseFaultType_Description(struct soap*, struct _wsbf2__BaseFaultType_Description *, const char*, const char*);
 
-#ifndef soap_read__wsrfbf__BaseFaultType_ErrorCode
-#define soap_read__wsrfbf__BaseFaultType_ErrorCode(soap, data) ( ((data) ? (soap_default__wsrfbf__BaseFaultType_ErrorCode(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__wsrfbf__BaseFaultType_ErrorCode(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET__wsrfbf__BaseFaultType_ErrorCode
-#define soap_GET__wsrfbf__BaseFaultType_ErrorCode(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__wsrfbf__BaseFaultType_ErrorCode(soap, (data)), (soap)->error )
+#ifndef soap_read__wsbf2__BaseFaultType_Description
+#define soap_read__wsbf2__BaseFaultType_Description(soap, data) ( ((data) ? (soap_default__wsbf2__BaseFaultType_Description(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__wsbf2__BaseFaultType_Description(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv__wsrfbf__BaseFaultType_ErrorCode
-#define soap_POST_recv__wsrfbf__BaseFaultType_ErrorCode(soap, data) ( soap_read__wsrfbf__BaseFaultType_ErrorCode(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_GET__wsbf2__BaseFaultType_Description
+#define soap_GET__wsbf2__BaseFaultType_Description(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__wsbf2__BaseFaultType_Description(soap, (data)), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_recv__wsbf2__BaseFaultType_Description
+#define soap_POST_recv__wsbf2__BaseFaultType_Description(soap, data) ( soap_read__wsbf2__BaseFaultType_Description(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
 
-#ifndef SOAP_TYPE_wsrfbf__BaseFaultType_DEFINED
-#define SOAP_TYPE_wsrfbf__BaseFaultType_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_wsrfbf__BaseFaultType(struct soap*, struct wsrfbf__BaseFaultType *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_wsrfbf__BaseFaultType(struct soap*, const struct wsrfbf__BaseFaultType *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_wsrfbf__BaseFaultType(struct soap*, const char*, int, const struct wsrfbf__BaseFaultType *, const char*);
-SOAP_FMAC3 struct wsrfbf__BaseFaultType * SOAP_FMAC4 soap_in_wsrfbf__BaseFaultType(struct soap*, const char*, struct wsrfbf__BaseFaultType *, const char*);
+#ifndef SOAP_TYPE__wsbf2__BaseFaultType_ErrorCode_DEFINED
+#define SOAP_TYPE__wsbf2__BaseFaultType_ErrorCode_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_default__wsbf2__BaseFaultType_ErrorCode(struct soap*, struct _wsbf2__BaseFaultType_ErrorCode *);
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize__wsbf2__BaseFaultType_ErrorCode(struct soap*, const struct _wsbf2__BaseFaultType_ErrorCode *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out__wsbf2__BaseFaultType_ErrorCode(struct soap*, const char*, int, const struct _wsbf2__BaseFaultType_ErrorCode *, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_ErrorCode * SOAP_FMAC4 soap_in__wsbf2__BaseFaultType_ErrorCode(struct soap*, const char*, struct _wsbf2__BaseFaultType_ErrorCode *, const char*);
 
-SOAP_FMAC3 struct wsrfbf__BaseFaultType * SOAP_FMAC4 soap_new_wsrfbf__BaseFaultType(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_wsrfbf__BaseFaultType(struct soap*, const struct wsrfbf__BaseFaultType *, const char*, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_ErrorCode * SOAP_FMAC4 soap_new__wsbf2__BaseFaultType_ErrorCode(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put__wsbf2__BaseFaultType_ErrorCode(struct soap*, const struct _wsbf2__BaseFaultType_ErrorCode *, const char*, const char*);
 
-#ifndef soap_write_wsrfbf__BaseFaultType
-#define soap_write_wsrfbf__BaseFaultType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_wsrfbf__BaseFaultType(soap, data), 0) || soap_put_wsrfbf__BaseFaultType(soap, data, "wsrfbf:BaseFaultType", "") || soap_end_send(soap), (soap)->error )
+#ifndef soap_write__wsbf2__BaseFaultType_ErrorCode
+#define soap_write__wsbf2__BaseFaultType_ErrorCode(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize__wsbf2__BaseFaultType_ErrorCode(soap, data), 0) || soap_put__wsbf2__BaseFaultType_ErrorCode(soap, data, "wsbf2:BaseFaultType-ErrorCode", "") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_PUT_wsrfbf__BaseFaultType
-#define soap_PUT_wsrfbf__BaseFaultType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_wsrfbf__BaseFaultType(soap, data), 0) || soap_put_wsrfbf__BaseFaultType(soap, data, "wsrfbf:BaseFaultType", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_PUT__wsbf2__BaseFaultType_ErrorCode
+#define soap_PUT__wsbf2__BaseFaultType_ErrorCode(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize__wsbf2__BaseFaultType_ErrorCode(soap, data), 0) || soap_put__wsbf2__BaseFaultType_ErrorCode(soap, data, "wsbf2:BaseFaultType-ErrorCode", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send_wsrfbf__BaseFaultType
-#define soap_POST_send_wsrfbf__BaseFaultType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_wsrfbf__BaseFaultType(soap, data), 0) || soap_put_wsrfbf__BaseFaultType(soap, data, "wsrfbf:BaseFaultType", "") || soap_end_send(soap), (soap)->error )
+#ifndef soap_POST_send__wsbf2__BaseFaultType_ErrorCode
+#define soap_POST_send__wsbf2__BaseFaultType_ErrorCode(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize__wsbf2__BaseFaultType_ErrorCode(soap, data), 0) || soap_put__wsbf2__BaseFaultType_ErrorCode(soap, data, "wsbf2:BaseFaultType-ErrorCode", "") || soap_end_send(soap), (soap)->error )
 #endif
 
-SOAP_FMAC3 struct wsrfbf__BaseFaultType * SOAP_FMAC4 soap_get_wsrfbf__BaseFaultType(struct soap*, struct wsrfbf__BaseFaultType *, const char*, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_ErrorCode * SOAP_FMAC4 soap_get__wsbf2__BaseFaultType_ErrorCode(struct soap*, struct _wsbf2__BaseFaultType_ErrorCode *, const char*, const char*);
 
-#ifndef soap_read_wsrfbf__BaseFaultType
-#define soap_read_wsrfbf__BaseFaultType(soap, data) ( ((data) ? (soap_default_wsrfbf__BaseFaultType(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_wsrfbf__BaseFaultType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_wsrfbf__BaseFaultType
-#define soap_GET_wsrfbf__BaseFaultType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_wsrfbf__BaseFaultType(soap, (data)), (soap)->error )
+#ifndef soap_read__wsbf2__BaseFaultType_ErrorCode
+#define soap_read__wsbf2__BaseFaultType_ErrorCode(soap, data) ( ((data) ? (soap_default__wsbf2__BaseFaultType_ErrorCode(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get__wsbf2__BaseFaultType_ErrorCode(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv_wsrfbf__BaseFaultType
-#define soap_POST_recv_wsrfbf__BaseFaultType(soap, data) ( soap_read_wsrfbf__BaseFaultType(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_GET__wsbf2__BaseFaultType_ErrorCode
+#define soap_GET__wsbf2__BaseFaultType_ErrorCode(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read__wsbf2__BaseFaultType_ErrorCode(soap, (data)), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_recv__wsbf2__BaseFaultType_ErrorCode
+#define soap_POST_recv__wsbf2__BaseFaultType_ErrorCode(soap, data) ( soap_read__wsbf2__BaseFaultType_ErrorCode(soap, (data)) || soap_closesock(soap), (soap)->error )
+#endif
+
+#endif
+
+#ifndef SOAP_TYPE_wsbf2__BaseFaultType_DEFINED
+#define SOAP_TYPE_wsbf2__BaseFaultType_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_default_wsbf2__BaseFaultType(struct soap*, struct wsbf2__BaseFaultType *);
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_wsbf2__BaseFaultType(struct soap*, const struct wsbf2__BaseFaultType *);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_wsbf2__BaseFaultType(struct soap*, const char*, int, const struct wsbf2__BaseFaultType *, const char*);
+SOAP_FMAC3 struct wsbf2__BaseFaultType * SOAP_FMAC4 soap_in_wsbf2__BaseFaultType(struct soap*, const char*, struct wsbf2__BaseFaultType *, const char*);
+
+SOAP_FMAC3 struct wsbf2__BaseFaultType * SOAP_FMAC4 soap_new_wsbf2__BaseFaultType(struct soap *soap, int n);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_wsbf2__BaseFaultType(struct soap*, const struct wsbf2__BaseFaultType *, const char*, const char*);
+
+#ifndef soap_write_wsbf2__BaseFaultType
+#define soap_write_wsbf2__BaseFaultType(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_wsbf2__BaseFaultType(soap, data), 0) || soap_put_wsbf2__BaseFaultType(soap, data, "wsbf2:BaseFaultType", "") || soap_end_send(soap), (soap)->error )
+#endif
+
+
+#ifndef soap_PUT_wsbf2__BaseFaultType
+#define soap_PUT_wsbf2__BaseFaultType(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_wsbf2__BaseFaultType(soap, data), 0) || soap_put_wsbf2__BaseFaultType(soap, data, "wsbf2:BaseFaultType", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_send_wsbf2__BaseFaultType
+#define soap_POST_send_wsbf2__BaseFaultType(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_wsbf2__BaseFaultType(soap, data), 0) || soap_put_wsbf2__BaseFaultType(soap, data, "wsbf2:BaseFaultType", "") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 struct wsbf2__BaseFaultType * SOAP_FMAC4 soap_get_wsbf2__BaseFaultType(struct soap*, struct wsbf2__BaseFaultType *, const char*, const char*);
+
+#ifndef soap_read_wsbf2__BaseFaultType
+#define soap_read_wsbf2__BaseFaultType(soap, data) ( ((data) ? (soap_default_wsbf2__BaseFaultType(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_wsbf2__BaseFaultType(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#endif
+
+
+#ifndef soap_GET_wsbf2__BaseFaultType
+#define soap_GET_wsbf2__BaseFaultType(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_wsbf2__BaseFaultType(soap, (data)), (soap)->error )
+#endif
+
+
+#ifndef soap_POST_recv_wsbf2__BaseFaultType
+#define soap_POST_recv_wsbf2__BaseFaultType(soap, data) ( soap_read_wsbf2__BaseFaultType(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif
@@ -40937,48 +40987,6 @@ SOAP_FMAC3 struct xsd__base64Binary * SOAP_FMAC4 soap_get_xsd__base64Binary(stru
 
 #endif
 
-#ifndef SOAP_TYPE_SOAP_ENV__Envelope_DEFINED
-#define SOAP_TYPE_SOAP_ENV__Envelope_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_default_SOAP_ENV__Envelope(struct soap*, struct SOAP_ENV__Envelope *);
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_SOAP_ENV__Envelope(struct soap*, const struct SOAP_ENV__Envelope *);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_SOAP_ENV__Envelope(struct soap*, const char*, int, const struct SOAP_ENV__Envelope *, const char*);
-SOAP_FMAC3 struct SOAP_ENV__Envelope * SOAP_FMAC4 soap_in_SOAP_ENV__Envelope(struct soap*, const char*, struct SOAP_ENV__Envelope *, const char*);
-
-SOAP_FMAC3 struct SOAP_ENV__Envelope * SOAP_FMAC4 soap_new_SOAP_ENV__Envelope(struct soap *soap, int n);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_SOAP_ENV__Envelope(struct soap*, const struct SOAP_ENV__Envelope *, const char*, const char*);
-
-#ifndef soap_write_SOAP_ENV__Envelope
-#define soap_write_SOAP_ENV__Envelope(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || (soap_serialize_SOAP_ENV__Envelope(soap, data), 0) || soap_put_SOAP_ENV__Envelope(soap, data, "SOAP-ENV:Envelope", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_SOAP_ENV__Envelope
-#define soap_PUT_SOAP_ENV__Envelope(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || (soap_serialize_SOAP_ENV__Envelope(soap, data), 0) || soap_put_SOAP_ENV__Envelope(soap, data, "SOAP-ENV:Envelope", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_SOAP_ENV__Envelope
-#define soap_POST_send_SOAP_ENV__Envelope(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || (soap_serialize_SOAP_ENV__Envelope(soap, data), 0) || soap_put_SOAP_ENV__Envelope(soap, data, "SOAP-ENV:Envelope", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 struct SOAP_ENV__Envelope * SOAP_FMAC4 soap_get_SOAP_ENV__Envelope(struct soap*, struct SOAP_ENV__Envelope *, const char*, const char*);
-
-#ifndef soap_read_SOAP_ENV__Envelope
-#define soap_read_SOAP_ENV__Envelope(soap, data) ( ((data) ? (soap_default_SOAP_ENV__Envelope(soap, (data)), 0) : 0) || soap_begin_recv(soap) || !soap_get_SOAP_ENV__Envelope(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_SOAP_ENV__Envelope
-#define soap_GET_SOAP_ENV__Envelope(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_SOAP_ENV__Envelope(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_SOAP_ENV__Envelope
-#define soap_POST_recv_SOAP_ENV__Envelope(soap, data) ( soap_read_SOAP_ENV__Envelope(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
 #ifndef WITH_NOGLOBAL
 
 #ifndef SOAP_TYPE_SOAP_ENV__Fault_DEFINED
@@ -50764,31 +50772,40 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTowstop__Documentation(struct soap*, s
 SOAP_FMAC3 struct wstop__Documentation ** SOAP_FMAC4 soap_get_PointerTowstop__Documentation(struct soap*, struct wstop__Documentation **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerTo_wsrfbf__BaseFaultType_FaultCause_DEFINED
-#define SOAP_TYPE_PointerTo_wsrfbf__BaseFaultType_FaultCause_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTo_wsrfbf__BaseFaultType_FaultCause(struct soap*, struct _wsrfbf__BaseFaultType_FaultCause *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTo_wsrfbf__BaseFaultType_FaultCause(struct soap*, const char *, int, struct _wsrfbf__BaseFaultType_FaultCause *const*, const char *);
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_FaultCause ** SOAP_FMAC4 soap_in_PointerTo_wsrfbf__BaseFaultType_FaultCause(struct soap*, const char*, struct _wsrfbf__BaseFaultType_FaultCause **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTo_wsrfbf__BaseFaultType_FaultCause(struct soap*, struct _wsrfbf__BaseFaultType_FaultCause *const*, const char*, const char*);
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_FaultCause ** SOAP_FMAC4 soap_get_PointerTo_wsrfbf__BaseFaultType_FaultCause(struct soap*, struct _wsrfbf__BaseFaultType_FaultCause **, const char*, const char*);
+#ifndef SOAP_TYPE_PointerTo_wsbf2__BaseFaultType_FaultCause_DEFINED
+#define SOAP_TYPE_PointerTo_wsbf2__BaseFaultType_FaultCause_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTo_wsbf2__BaseFaultType_FaultCause(struct soap*, struct _wsbf2__BaseFaultType_FaultCause *const*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTo_wsbf2__BaseFaultType_FaultCause(struct soap*, const char *, int, struct _wsbf2__BaseFaultType_FaultCause *const*, const char *);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_FaultCause ** SOAP_FMAC4 soap_in_PointerTo_wsbf2__BaseFaultType_FaultCause(struct soap*, const char*, struct _wsbf2__BaseFaultType_FaultCause **, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTo_wsbf2__BaseFaultType_FaultCause(struct soap*, struct _wsbf2__BaseFaultType_FaultCause *const*, const char*, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_FaultCause ** SOAP_FMAC4 soap_get_PointerTo_wsbf2__BaseFaultType_FaultCause(struct soap*, struct _wsbf2__BaseFaultType_FaultCause **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerTo_wsrfbf__BaseFaultType_Description_DEFINED
-#define SOAP_TYPE_PointerTo_wsrfbf__BaseFaultType_Description_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTo_wsrfbf__BaseFaultType_Description(struct soap*, struct _wsrfbf__BaseFaultType_Description *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTo_wsrfbf__BaseFaultType_Description(struct soap*, const char *, int, struct _wsrfbf__BaseFaultType_Description *const*, const char *);
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_Description ** SOAP_FMAC4 soap_in_PointerTo_wsrfbf__BaseFaultType_Description(struct soap*, const char*, struct _wsrfbf__BaseFaultType_Description **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTo_wsrfbf__BaseFaultType_Description(struct soap*, struct _wsrfbf__BaseFaultType_Description *const*, const char*, const char*);
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_Description ** SOAP_FMAC4 soap_get_PointerTo_wsrfbf__BaseFaultType_Description(struct soap*, struct _wsrfbf__BaseFaultType_Description **, const char*, const char*);
+#ifndef SOAP_TYPE_PointerTo_wsbf2__BaseFaultType_Description_DEFINED
+#define SOAP_TYPE_PointerTo_wsbf2__BaseFaultType_Description_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTo_wsbf2__BaseFaultType_Description(struct soap*, struct _wsbf2__BaseFaultType_Description *const*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTo_wsbf2__BaseFaultType_Description(struct soap*, const char *, int, struct _wsbf2__BaseFaultType_Description *const*, const char *);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_Description ** SOAP_FMAC4 soap_in_PointerTo_wsbf2__BaseFaultType_Description(struct soap*, const char*, struct _wsbf2__BaseFaultType_Description **, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTo_wsbf2__BaseFaultType_Description(struct soap*, struct _wsbf2__BaseFaultType_Description *const*, const char*, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_Description ** SOAP_FMAC4 soap_get_PointerTo_wsbf2__BaseFaultType_Description(struct soap*, struct _wsbf2__BaseFaultType_Description **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerTo_wsrfbf__BaseFaultType_ErrorCode_DEFINED
-#define SOAP_TYPE_PointerTo_wsrfbf__BaseFaultType_ErrorCode_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTo_wsrfbf__BaseFaultType_ErrorCode(struct soap*, struct _wsrfbf__BaseFaultType_ErrorCode *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTo_wsrfbf__BaseFaultType_ErrorCode(struct soap*, const char *, int, struct _wsrfbf__BaseFaultType_ErrorCode *const*, const char *);
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_ErrorCode ** SOAP_FMAC4 soap_in_PointerTo_wsrfbf__BaseFaultType_ErrorCode(struct soap*, const char*, struct _wsrfbf__BaseFaultType_ErrorCode **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTo_wsrfbf__BaseFaultType_ErrorCode(struct soap*, struct _wsrfbf__BaseFaultType_ErrorCode *const*, const char*, const char*);
-SOAP_FMAC3 struct _wsrfbf__BaseFaultType_ErrorCode ** SOAP_FMAC4 soap_get_PointerTo_wsrfbf__BaseFaultType_ErrorCode(struct soap*, struct _wsrfbf__BaseFaultType_ErrorCode **, const char*, const char*);
+#ifndef SOAP_TYPE_PointerTo_wsbf2__BaseFaultType_ErrorCode_DEFINED
+#define SOAP_TYPE_PointerTo_wsbf2__BaseFaultType_ErrorCode_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTo_wsbf2__BaseFaultType_ErrorCode(struct soap*, struct _wsbf2__BaseFaultType_ErrorCode *const*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTo_wsbf2__BaseFaultType_ErrorCode(struct soap*, const char *, int, struct _wsbf2__BaseFaultType_ErrorCode *const*, const char *);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_ErrorCode ** SOAP_FMAC4 soap_in_PointerTo_wsbf2__BaseFaultType_ErrorCode(struct soap*, const char*, struct _wsbf2__BaseFaultType_ErrorCode **, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTo_wsbf2__BaseFaultType_ErrorCode(struct soap*, struct _wsbf2__BaseFaultType_ErrorCode *const*, const char*, const char*);
+SOAP_FMAC3 struct _wsbf2__BaseFaultType_ErrorCode ** SOAP_FMAC4 soap_get_PointerTo_wsbf2__BaseFaultType_ErrorCode(struct soap*, struct _wsbf2__BaseFaultType_ErrorCode **, const char*, const char*);
+#endif
+
+#ifndef SOAP_TYPE_PointerTounsignedInt_DEFINED
+#define SOAP_TYPE_PointerTounsignedInt_DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTounsignedInt(struct soap*, unsigned int *const*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTounsignedInt(struct soap*, const char *, int, unsigned int *const*, const char *);
+SOAP_FMAC3 unsigned int ** SOAP_FMAC4 soap_in_PointerTounsignedInt(struct soap*, const char*, unsigned int **, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTounsignedInt(struct soap*, unsigned int *const*, const char*, const char*);
+SOAP_FMAC3 unsigned int ** SOAP_FMAC4 soap_get_PointerTounsignedInt(struct soap*, unsigned int **, const char*, const char*);
 #endif
 
 #ifndef SOAP_TYPE_PointerTo_wsnt__Subscribe_SubscriptionPolicy_DEFINED
@@ -51108,15 +51125,6 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToSOAP_ENV__Fault(struct soap*, struct
 SOAP_FMAC3 struct SOAP_ENV__Fault ** SOAP_FMAC4 soap_get_PointerToSOAP_ENV__Fault(struct soap*, struct SOAP_ENV__Fault **, const char*, const char*);
 #endif
 
-#endif
-
-#ifndef SOAP_TYPE_PointerToSOAP_ENV__Envelope_DEFINED
-#define SOAP_TYPE_PointerToSOAP_ENV__Envelope_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToSOAP_ENV__Envelope(struct soap*, struct SOAP_ENV__Envelope *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToSOAP_ENV__Envelope(struct soap*, const char *, int, struct SOAP_ENV__Envelope *const*, const char *);
-SOAP_FMAC3 struct SOAP_ENV__Envelope ** SOAP_FMAC4 soap_in_PointerToSOAP_ENV__Envelope(struct soap*, const char*, struct SOAP_ENV__Envelope **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToSOAP_ENV__Envelope(struct soap*, struct SOAP_ENV__Envelope *const*, const char*, const char*);
-SOAP_FMAC3 struct SOAP_ENV__Envelope ** SOAP_FMAC4 soap_get_PointerToSOAP_ENV__Envelope(struct soap*, struct SOAP_ENV__Envelope **, const char*, const char*);
 #endif
 
 #ifndef SOAP_TYPE_PointerTott__AnalyticsState_DEFINED
@@ -54197,24 +54205,6 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTott__NetworkZeroConfiguration(struct 
 SOAP_FMAC3 struct tt__NetworkZeroConfiguration ** SOAP_FMAC4 soap_get_PointerTott__NetworkZeroConfiguration(struct soap*, struct tt__NetworkZeroConfiguration **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerTott__IPv6Address_DEFINED
-#define SOAP_TYPE_PointerTott__IPv6Address_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTott__IPv6Address(struct soap*, char **const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTott__IPv6Address(struct soap*, const char *, int, char **const*, const char *);
-SOAP_FMAC3 char *** SOAP_FMAC4 soap_in_PointerTott__IPv6Address(struct soap*, const char*, char ***, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTott__IPv6Address(struct soap*, char **const*, const char*, const char*);
-SOAP_FMAC3 char *** SOAP_FMAC4 soap_get_PointerTott__IPv6Address(struct soap*, char ***, const char*, const char*);
-#endif
-
-#ifndef SOAP_TYPE_PointerTott__IPv4Address_DEFINED
-#define SOAP_TYPE_PointerTott__IPv4Address_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTott__IPv4Address(struct soap*, char **const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerTott__IPv4Address(struct soap*, const char *, int, char **const*, const char *);
-SOAP_FMAC3 char *** SOAP_FMAC4 soap_in_PointerTott__IPv4Address(struct soap*, const char*, char ***, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTott__IPv4Address(struct soap*, char **const*, const char*, const char*);
-SOAP_FMAC3 char *** SOAP_FMAC4 soap_get_PointerTott__IPv4Address(struct soap*, char ***, const char*, const char*);
-#endif
-
 #ifndef SOAP_TYPE_PointerTott__NetworkGateway_DEFINED
 #define SOAP_TYPE_PointerTott__NetworkGateway_DEFINED
 SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTott__NetworkGateway(struct soap*, struct tt__NetworkGateway *const*);
@@ -54359,15 +54349,6 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTott__NetworkHost(struct soap*, struct
 SOAP_FMAC3 struct tt__NetworkHost ** SOAP_FMAC4 soap_get_PointerTott__NetworkHost(struct soap*, struct tt__NetworkHost **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerToxsd__anyURI_DEFINED
-#define SOAP_TYPE_PointerToxsd__anyURI_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToxsd__anyURI(struct soap*, char **const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToxsd__anyURI(struct soap*, const char *, int, char **const*, const char *);
-SOAP_FMAC3 char *** SOAP_FMAC4 soap_in_PointerToxsd__anyURI(struct soap*, const char*, char ***, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToxsd__anyURI(struct soap*, char **const*, const char*, const char*);
-SOAP_FMAC3 char *** SOAP_FMAC4 soap_get_PointerToxsd__anyURI(struct soap*, char ***, const char*, const char*);
-#endif
-
 #ifndef SOAP_TYPE_PointerTott__Scope_DEFINED
 #define SOAP_TYPE_PointerTott__Scope_DEFINED
 SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerTott__Scope(struct soap*, struct tt__Scope *const*);
@@ -54485,13 +54466,13 @@ SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerTo_tds__UserCredential_Extension(struc
 SOAP_FMAC3 struct _tds__UserCredential_Extension ** SOAP_FMAC4 soap_get_PointerTo_tds__UserCredential_Extension(struct soap*, struct _tds__UserCredential_Extension **, const char*, const char*);
 #endif
 
-#ifndef SOAP_TYPE_PointerToxsd__boolean_DEFINED
-#define SOAP_TYPE_PointerToxsd__boolean_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToxsd__boolean(struct soap*, enum xsd__boolean *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToxsd__boolean(struct soap*, const char *, int, enum xsd__boolean *const*, const char *);
-SOAP_FMAC3 enum xsd__boolean ** SOAP_FMAC4 soap_in_PointerToxsd__boolean(struct soap*, const char*, enum xsd__boolean **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToxsd__boolean(struct soap*, enum xsd__boolean *const*, const char*, const char*);
-SOAP_FMAC3 enum xsd__boolean ** SOAP_FMAC4 soap_get_PointerToxsd__boolean(struct soap*, enum xsd__boolean **, const char*, const char*);
+#ifndef SOAP_TYPE_PointerToxsd__boolean__DEFINED
+#define SOAP_TYPE_PointerToxsd__boolean__DEFINED
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToxsd__boolean_(struct soap*, enum xsd__boolean_ *const*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToxsd__boolean_(struct soap*, const char *, int, enum xsd__boolean_ *const*, const char *);
+SOAP_FMAC3 enum xsd__boolean_ ** SOAP_FMAC4 soap_in_PointerToxsd__boolean_(struct soap*, const char*, enum xsd__boolean_ **, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToxsd__boolean_(struct soap*, enum xsd__boolean_ *const*, const char*, const char*);
+SOAP_FMAC3 enum xsd__boolean_ ** SOAP_FMAC4 soap_get_PointerToxsd__boolean_(struct soap*, enum xsd__boolean_ **, const char*, const char*);
 #endif
 
 #ifndef SOAP_TYPE_PointerTotds__MiscCapabilities_DEFINED
@@ -55186,51 +55167,55 @@ SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_tt__Description(struct soap*, char **, co
 #endif
 
 #endif
-/* tt__TopicNamespaceLocation is a typedef synonym for xsd__anyURI */
 
 #ifndef SOAP_TYPE_tt__TopicNamespaceLocation_DEFINED
 #define SOAP_TYPE_tt__TopicNamespaceLocation_DEFINED
 
-#define soap_default_tt__TopicNamespaceLocation soap_default_xsd__anyURI
-
-
-#define soap_serialize_tt__TopicNamespaceLocation soap_serialize_xsd__anyURI
-
+#ifdef SOAP_DEFAULT_tt__TopicNamespaceLocation
+#define soap_default_tt__TopicNamespaceLocation(soap, a) (*(a) = SOAP_DEFAULT_tt__TopicNamespaceLocation)
+#else
+#define soap_default_tt__TopicNamespaceLocation(soap, a) (*(a) = (char *)0)
+#endif
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_tt__TopicNamespaceLocation(struct soap*, char *const*);
 
 #define soap_tt__TopicNamespaceLocation2s(soap, a) (a)
-
-#define soap_out_tt__TopicNamespaceLocation soap_out_xsd__anyURI
-
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_tt__TopicNamespaceLocation(struct soap*, const char*, int, char*const*, const char*);
 
 #define soap_s2tt__TopicNamespaceLocation(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
+SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_tt__TopicNamespaceLocation(struct soap*, const char*, char **, const char*);
+#define soap_new_tt__TopicNamespaceLocation soap_new_string
 
-#define soap_in_tt__TopicNamespaceLocation soap_in_xsd__anyURI
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_tt__TopicNamespaceLocation(struct soap*, char *const*, const char*, const char*);
 
-#define soap_new_tt__TopicNamespaceLocation soap_new_xsd__anyURI
-
-
-#define soap_put_tt__TopicNamespaceLocation soap_put_xsd__anyURI
-
-
-#define soap_write_tt__TopicNamespaceLocation soap_write_xsd__anyURI
+#ifndef soap_write_tt__TopicNamespaceLocation
+#define soap_write_tt__TopicNamespaceLocation(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_tt__TopicNamespaceLocation(soap, data, "tt:TopicNamespaceLocation", "") || soap_end_send(soap), (soap)->error )
+#endif
 
 
-#define soap_PUT_tt__TopicNamespaceLocation soap_PUT_xsd__anyURI
+#ifndef soap_PUT_tt__TopicNamespaceLocation
+#define soap_PUT_tt__TopicNamespaceLocation(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_tt__TopicNamespaceLocation(soap, data, "tt:TopicNamespaceLocation", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#endif
 
 
-#define soap_POST_send_tt__TopicNamespaceLocation soap_POST_send_xsd__anyURI
+#ifndef soap_POST_send_tt__TopicNamespaceLocation
+#define soap_POST_send_tt__TopicNamespaceLocation(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_tt__TopicNamespaceLocation(soap, data, "tt:TopicNamespaceLocation", "") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_tt__TopicNamespaceLocation(struct soap*, char **, const char*, const char*);
+
+#ifndef soap_read_tt__TopicNamespaceLocation
+#define soap_read_tt__TopicNamespaceLocation(soap, data) ( soap_begin_recv(soap) || !soap_get_tt__TopicNamespaceLocation(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#endif
 
 
-#define soap_get_tt__TopicNamespaceLocation soap_get_xsd__anyURI
+#ifndef soap_GET_tt__TopicNamespaceLocation
+#define soap_GET_tt__TopicNamespaceLocation(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_tt__TopicNamespaceLocation(soap, (data)), (soap)->error )
+#endif
 
 
-#define soap_read_tt__TopicNamespaceLocation soap_read_xsd__anyURI
-
-
-#define soap_GET_tt__TopicNamespaceLocation soap_GET_xsd__anyURI
-
-
-#define soap_POST_recv_tt__TopicNamespaceLocation soap_POST_recv_xsd__anyURI
+#ifndef soap_POST_recv_tt__TopicNamespaceLocation
+#define soap_POST_recv_tt__TopicNamespaceLocation(soap, data) ( soap_read_tt__TopicNamespaceLocation(soap, (data)) || soap_closesock(soap), (soap)->error )
+#endif
 
 #endif
 
@@ -55382,53 +55367,6 @@ SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_tt__Dot11PSKPassphrase(struct soap*, char
 #define soap_POST_recv_tt__Domain soap_POST_recv_xsd__token
 
 #endif
-/* tt__DNSName is a typedef synonym for xsd__token */
-
-#ifndef SOAP_TYPE_tt__DNSName_DEFINED
-#define SOAP_TYPE_tt__DNSName_DEFINED
-
-#define soap_default_tt__DNSName soap_default_xsd__token
-
-
-#define soap_serialize_tt__DNSName soap_serialize_xsd__token
-
-
-#define soap_tt__DNSName2s(soap, a) (a)
-
-#define soap_out_tt__DNSName soap_out_xsd__token
-
-
-#define soap_s2tt__DNSName(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
-
-#define soap_in_tt__DNSName soap_in_xsd__token
-
-#define soap_new_tt__DNSName soap_new_xsd__token
-
-
-#define soap_put_tt__DNSName soap_put_xsd__token
-
-
-#define soap_write_tt__DNSName soap_write_xsd__token
-
-
-#define soap_PUT_tt__DNSName soap_PUT_xsd__token
-
-
-#define soap_POST_send_tt__DNSName soap_POST_send_xsd__token
-
-
-#define soap_get_tt__DNSName soap_get_xsd__token
-
-
-#define soap_read_tt__DNSName soap_read_xsd__token
-
-
-#define soap_GET_tt__DNSName soap_GET_xsd__token
-
-
-#define soap_POST_recv_tt__DNSName soap_POST_recv_xsd__token
-
-#endif
 /* tt__HwAddress is a typedef synonym for xsd__token */
 
 #ifndef SOAP_TYPE_tt__HwAddress_DEFINED
@@ -55474,147 +55412,6 @@ SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_tt__Dot11PSKPassphrase(struct soap*, char
 
 
 #define soap_POST_recv_tt__HwAddress soap_POST_recv_xsd__token
-
-#endif
-/* tt__IPv6Address is a typedef synonym for xsd__token */
-
-#ifndef SOAP_TYPE_tt__IPv6Address_DEFINED
-#define SOAP_TYPE_tt__IPv6Address_DEFINED
-
-#define soap_default_tt__IPv6Address soap_default_xsd__token
-
-
-#define soap_serialize_tt__IPv6Address soap_serialize_xsd__token
-
-
-#define soap_tt__IPv6Address2s(soap, a) (a)
-
-#define soap_out_tt__IPv6Address soap_out_xsd__token
-
-
-#define soap_s2tt__IPv6Address(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
-
-#define soap_in_tt__IPv6Address soap_in_xsd__token
-
-#define soap_new_tt__IPv6Address soap_new_xsd__token
-
-
-#define soap_put_tt__IPv6Address soap_put_xsd__token
-
-
-#define soap_write_tt__IPv6Address soap_write_xsd__token
-
-
-#define soap_PUT_tt__IPv6Address soap_PUT_xsd__token
-
-
-#define soap_POST_send_tt__IPv6Address soap_POST_send_xsd__token
-
-
-#define soap_get_tt__IPv6Address soap_get_xsd__token
-
-
-#define soap_read_tt__IPv6Address soap_read_xsd__token
-
-
-#define soap_GET_tt__IPv6Address soap_GET_xsd__token
-
-
-#define soap_POST_recv_tt__IPv6Address soap_POST_recv_xsd__token
-
-#endif
-/* tt__IPv4Address is a typedef synonym for xsd__token */
-
-#ifndef SOAP_TYPE_tt__IPv4Address_DEFINED
-#define SOAP_TYPE_tt__IPv4Address_DEFINED
-
-#define soap_default_tt__IPv4Address soap_default_xsd__token
-
-
-#define soap_serialize_tt__IPv4Address soap_serialize_xsd__token
-
-
-#define soap_tt__IPv4Address2s(soap, a) (a)
-
-#define soap_out_tt__IPv4Address soap_out_xsd__token
-
-
-#define soap_s2tt__IPv4Address(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
-
-#define soap_in_tt__IPv4Address soap_in_xsd__token
-
-#define soap_new_tt__IPv4Address soap_new_xsd__token
-
-
-#define soap_put_tt__IPv4Address soap_put_xsd__token
-
-
-#define soap_write_tt__IPv4Address soap_write_xsd__token
-
-
-#define soap_PUT_tt__IPv4Address soap_PUT_xsd__token
-
-
-#define soap_POST_send_tt__IPv4Address soap_POST_send_xsd__token
-
-
-#define soap_get_tt__IPv4Address soap_get_xsd__token
-
-
-#define soap_read_tt__IPv4Address soap_read_xsd__token
-
-
-#define soap_GET_tt__IPv4Address soap_GET_xsd__token
-
-
-#define soap_POST_recv_tt__IPv4Address soap_POST_recv_xsd__token
-
-#endif
-/* tt__NetworkInterfaceConfigPriority is a typedef synonym for xsd__integer */
-
-#ifndef SOAP_TYPE_tt__NetworkInterfaceConfigPriority_DEFINED
-#define SOAP_TYPE_tt__NetworkInterfaceConfigPriority_DEFINED
-
-#define soap_default_tt__NetworkInterfaceConfigPriority soap_default_xsd__integer
-
-
-#define soap_serialize_tt__NetworkInterfaceConfigPriority soap_serialize_xsd__integer
-
-
-#define soap_tt__NetworkInterfaceConfigPriority2s(soap, a) (a)
-
-#define soap_out_tt__NetworkInterfaceConfigPriority soap_out_xsd__integer
-
-
-#define soap_s2tt__NetworkInterfaceConfigPriority(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
-
-#define soap_in_tt__NetworkInterfaceConfigPriority soap_in_xsd__integer
-
-#define soap_new_tt__NetworkInterfaceConfigPriority soap_new_xsd__integer
-
-
-#define soap_put_tt__NetworkInterfaceConfigPriority soap_put_xsd__integer
-
-
-#define soap_write_tt__NetworkInterfaceConfigPriority soap_write_xsd__integer
-
-
-#define soap_PUT_tt__NetworkInterfaceConfigPriority soap_PUT_xsd__integer
-
-
-#define soap_POST_send_tt__NetworkInterfaceConfigPriority soap_POST_send_xsd__integer
-
-
-#define soap_get_tt__NetworkInterfaceConfigPriority soap_get_xsd__integer
-
-
-#define soap_read_tt__NetworkInterfaceConfigPriority soap_read_xsd__integer
-
-
-#define soap_GET_tt__NetworkInterfaceConfigPriority soap_GET_xsd__integer
-
-
-#define soap_POST_recv_tt__NetworkInterfaceConfigPriority soap_POST_recv_xsd__integer
 
 #endif
 
@@ -56124,159 +55921,6 @@ SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_xsd__token(struct soap*, char **, const c
 
 #endif
 
-#ifndef SOAP_TYPE_xsd__nonNegativeInteger_DEFINED
-#define SOAP_TYPE_xsd__nonNegativeInteger_DEFINED
-
-#ifdef SOAP_DEFAULT_xsd__nonNegativeInteger
-#define soap_default_xsd__nonNegativeInteger(soap, a) (*(a) = SOAP_DEFAULT_xsd__nonNegativeInteger)
-#else
-#define soap_default_xsd__nonNegativeInteger(soap, a) (*(a) = (char *)0)
-#endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_xsd__nonNegativeInteger(struct soap*, char *const*);
-
-#define soap_xsd__nonNegativeInteger2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_xsd__nonNegativeInteger(struct soap*, const char*, int, char*const*, const char*);
-
-#define soap_s2xsd__nonNegativeInteger(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_xsd__nonNegativeInteger(struct soap*, const char*, char **, const char*);
-#define soap_new_xsd__nonNegativeInteger soap_new_string
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_xsd__nonNegativeInteger(struct soap*, char *const*, const char*, const char*);
-
-#ifndef soap_write_xsd__nonNegativeInteger
-#define soap_write_xsd__nonNegativeInteger(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_xsd__nonNegativeInteger(soap, data, "xsd:nonNegativeInteger", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_xsd__nonNegativeInteger
-#define soap_PUT_xsd__nonNegativeInteger(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_xsd__nonNegativeInteger(soap, data, "xsd:nonNegativeInteger", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_xsd__nonNegativeInteger
-#define soap_POST_send_xsd__nonNegativeInteger(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_xsd__nonNegativeInteger(soap, data, "xsd:nonNegativeInteger", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_xsd__nonNegativeInteger(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_xsd__nonNegativeInteger
-#define soap_read_xsd__nonNegativeInteger(soap, data) ( soap_begin_recv(soap) || !soap_get_xsd__nonNegativeInteger(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_xsd__nonNegativeInteger
-#define soap_GET_xsd__nonNegativeInteger(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_xsd__nonNegativeInteger(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_xsd__nonNegativeInteger
-#define soap_POST_recv_xsd__nonNegativeInteger(soap, data) ( soap_read_xsd__nonNegativeInteger(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_xsd__integer_DEFINED
-#define SOAP_TYPE_xsd__integer_DEFINED
-
-#ifdef SOAP_DEFAULT_xsd__integer
-#define soap_default_xsd__integer(soap, a) (*(a) = SOAP_DEFAULT_xsd__integer)
-#else
-#define soap_default_xsd__integer(soap, a) (*(a) = (char *)0)
-#endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_xsd__integer(struct soap*, char *const*);
-
-#define soap_xsd__integer2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_xsd__integer(struct soap*, const char*, int, char*const*, const char*);
-
-#define soap_s2xsd__integer(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_xsd__integer(struct soap*, const char*, char **, const char*);
-#define soap_new_xsd__integer soap_new_string
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_xsd__integer(struct soap*, char *const*, const char*, const char*);
-
-#ifndef soap_write_xsd__integer
-#define soap_write_xsd__integer(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_xsd__integer(soap, data, "xsd:integer", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_xsd__integer
-#define soap_PUT_xsd__integer(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_xsd__integer(soap, data, "xsd:integer", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_xsd__integer
-#define soap_POST_send_xsd__integer(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_xsd__integer(soap, data, "xsd:integer", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_xsd__integer(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_xsd__integer
-#define soap_read_xsd__integer(soap, data) ( soap_begin_recv(soap) || !soap_get_xsd__integer(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_xsd__integer
-#define soap_GET_xsd__integer(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_xsd__integer(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_xsd__integer
-#define soap_POST_recv_xsd__integer(soap, data) ( soap_read_xsd__integer(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
-#ifndef SOAP_TYPE_xsd__anyURI_DEFINED
-#define SOAP_TYPE_xsd__anyURI_DEFINED
-
-#ifdef SOAP_DEFAULT_xsd__anyURI
-#define soap_default_xsd__anyURI(soap, a) (*(a) = SOAP_DEFAULT_xsd__anyURI)
-#else
-#define soap_default_xsd__anyURI(soap, a) (*(a) = (char *)0)
-#endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_xsd__anyURI(struct soap*, char *const*);
-
-#define soap_xsd__anyURI2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_xsd__anyURI(struct soap*, const char*, int, char*const*, const char*);
-
-#define soap_s2xsd__anyURI(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_xsd__anyURI(struct soap*, const char*, char **, const char*);
-#define soap_new_xsd__anyURI soap_new_string
-
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_xsd__anyURI(struct soap*, char *const*, const char*, const char*);
-
-#ifndef soap_write_xsd__anyURI
-#define soap_write_xsd__anyURI(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_xsd__anyURI(soap, data, "xsd:anyURI", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_xsd__anyURI
-#define soap_PUT_xsd__anyURI(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_xsd__anyURI(soap, data, "xsd:anyURI", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_send_xsd__anyURI
-#define soap_POST_send_xsd__anyURI(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_xsd__anyURI(soap, data, "xsd:anyURI", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_xsd__anyURI(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_xsd__anyURI
-#define soap_read_xsd__anyURI(soap, data) ( soap_begin_recv(soap) || !soap_get_xsd__anyURI(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_GET_xsd__anyURI
-#define soap_GET_xsd__anyURI(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_xsd__anyURI(soap, (data)), (soap)->error )
-#endif
-
-
-#ifndef soap_POST_recv_xsd__anyURI
-#define soap_POST_recv_xsd__anyURI(soap, data) ( soap_read_xsd__anyURI(soap, (data)) || soap_closesock(soap), (soap)->error )
-#endif
-
-#endif
-
 #ifndef SOAP_TYPE_xsd__anySimpleType_DEFINED
 #define SOAP_TYPE_xsd__anySimpleType_DEFINED
 
@@ -56328,66 +55972,53 @@ SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_xsd__anySimpleType(struct soap*, char **,
 
 #endif
 
-#ifndef SOAP_TYPE_xsd__NCName_DEFINED
-#define SOAP_TYPE_xsd__NCName_DEFINED
+#ifndef SOAP_TYPE_SOAP_ENV__Envelope_DEFINED
+#define SOAP_TYPE_SOAP_ENV__Envelope_DEFINED
 
-#ifdef SOAP_DEFAULT_xsd__NCName
-#define soap_default_xsd__NCName(soap, a) (*(a) = SOAP_DEFAULT_xsd__NCName)
+#ifdef SOAP_DEFAULT_SOAP_ENV__Envelope
+#define soap_default_SOAP_ENV__Envelope(soap, a) (*(a) = SOAP_DEFAULT_SOAP_ENV__Envelope)
 #else
-#define soap_default_xsd__NCName(soap, a) (*(a) = (char *)0)
+#define soap_default_SOAP_ENV__Envelope(soap, a) (*(a) = (char *)0)
 #endif
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_xsd__NCName(struct soap*, char *const*);
+SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_SOAP_ENV__Envelope(struct soap*, char *const*);
 
-#define soap_xsd__NCName2s(soap, a) (a)
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_xsd__NCName(struct soap*, const char*, int, char*const*, const char*);
+#define soap_SOAP_ENV__Envelope2s(soap, a) (a)
+SOAP_FMAC3 int SOAP_FMAC4 soap_out_SOAP_ENV__Envelope(struct soap*, const char*, int, char*const*, const char*);
 
-#define soap_s2xsd__NCName(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
-SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_xsd__NCName(struct soap*, const char*, char **, const char*);
-#define soap_new_xsd__NCName soap_new_string
+#define soap_s2SOAP_ENV__Envelope(soap, s, a) soap_s2char((soap), (s), (char**)(a), 0, -1, NULL)
+SOAP_FMAC3 char * * SOAP_FMAC4 soap_in_SOAP_ENV__Envelope(struct soap*, const char*, char **, const char*);
+#define soap_new_SOAP_ENV__Envelope soap_new_string
 
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_xsd__NCName(struct soap*, char *const*, const char*, const char*);
+SOAP_FMAC3 int SOAP_FMAC4 soap_put_SOAP_ENV__Envelope(struct soap*, char *const*, const char*, const char*);
 
-#ifndef soap_write_xsd__NCName
-#define soap_write_xsd__NCName(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_xsd__NCName(soap, data, "xsd:NCName", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-
-#ifndef soap_PUT_xsd__NCName
-#define soap_PUT_xsd__NCName(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_xsd__NCName(soap, data, "xsd:NCName", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
+#ifndef soap_write_SOAP_ENV__Envelope
+#define soap_write_SOAP_ENV__Envelope(soap, data) ( soap_free_temp(soap), soap_begin_send(soap) || soap_put_SOAP_ENV__Envelope(soap, data, "SOAP-ENV:Envelope", "") || soap_end_send(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_send_xsd__NCName
-#define soap_POST_send_xsd__NCName(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_xsd__NCName(soap, data, "xsd:NCName", "") || soap_end_send(soap), (soap)->error )
-#endif
-
-SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_xsd__NCName(struct soap*, char **, const char*, const char*);
-
-#ifndef soap_read_xsd__NCName
-#define soap_read_xsd__NCName(soap, data) ( soap_begin_recv(soap) || !soap_get_xsd__NCName(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
+#ifndef soap_PUT_SOAP_ENV__Envelope
+#define soap_PUT_SOAP_ENV__Envelope(soap, URL, data) ( soap_free_temp(soap), soap_PUT(soap, URL, NULL, NULL) || soap_put_SOAP_ENV__Envelope(soap, data, "SOAP-ENV:Envelope", "") || soap_end_send(soap) || soap_recv_empty_response(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_GET_xsd__NCName
-#define soap_GET_xsd__NCName(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_xsd__NCName(soap, (data)), (soap)->error )
+#ifndef soap_POST_send_SOAP_ENV__Envelope
+#define soap_POST_send_SOAP_ENV__Envelope(soap, URL, data) ( soap_free_temp(soap), soap_connect(soap, URL, NULL) || soap_put_SOAP_ENV__Envelope(soap, data, "SOAP-ENV:Envelope", "") || soap_end_send(soap), (soap)->error )
+#endif
+
+SOAP_FMAC3 char ** SOAP_FMAC4 soap_get_SOAP_ENV__Envelope(struct soap*, char **, const char*, const char*);
+
+#ifndef soap_read_SOAP_ENV__Envelope
+#define soap_read_SOAP_ENV__Envelope(soap, data) ( soap_begin_recv(soap) || !soap_get_SOAP_ENV__Envelope(soap, (data), NULL, NULL) || soap_end_recv(soap), (soap)->error )
 #endif
 
 
-#ifndef soap_POST_recv_xsd__NCName
-#define soap_POST_recv_xsd__NCName(soap, data) ( soap_read_xsd__NCName(soap, (data)) || soap_closesock(soap), (soap)->error )
+#ifndef soap_GET_SOAP_ENV__Envelope
+#define soap_GET_SOAP_ENV__Envelope(soap, URL, data) ( soap_GET(soap, URL, NULL) || soap_read_SOAP_ENV__Envelope(soap, (data)), (soap)->error )
 #endif
 
-#endif
 
-#ifndef WITH_NOGLOBAL
-
-#ifndef SOAP_TYPE_PointerToSOAP_ENV__Header_DEFINED
-#define SOAP_TYPE_PointerToSOAP_ENV__Header_DEFINED
-SOAP_FMAC3 void SOAP_FMAC4 soap_serialize_PointerToSOAP_ENV__Header(struct soap*, struct SOAP_ENV__Header *const*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_out_PointerToSOAP_ENV__Header(struct soap*, const char *, int, struct SOAP_ENV__Header *const*, const char *);
-SOAP_FMAC3 struct SOAP_ENV__Header ** SOAP_FMAC4 soap_in_PointerToSOAP_ENV__Header(struct soap*, const char*, struct SOAP_ENV__Header **, const char*);
-SOAP_FMAC3 int SOAP_FMAC4 soap_put_PointerToSOAP_ENV__Header(struct soap*, struct SOAP_ENV__Header *const*, const char*, const char*);
-SOAP_FMAC3 struct SOAP_ENV__Header ** SOAP_FMAC4 soap_get_PointerToSOAP_ENV__Header(struct soap*, struct SOAP_ENV__Header **, const char*, const char*);
+#ifndef soap_POST_recv_SOAP_ENV__Envelope
+#define soap_POST_recv_SOAP_ENV__Envelope(soap, data) ( soap_read_SOAP_ENV__Envelope(soap, (data)) || soap_closesock(soap), (soap)->error )
 #endif
 
 #endif

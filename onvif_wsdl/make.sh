@@ -5,7 +5,7 @@ mkdir all
 strall="devicemgmt.wsdl"
 echo $strall
 echo start wsdl2h ...
-./wsdl2h -sck  -o all/all.h -Nabc -t./typemap.dat $strall
+./wsdl2h -sck  -o all/all.h -Nabc -t./onvif_typemap.dat $strall
 cp ./onvif-header.h all/
 cd all
 cat all.h >> ./onvif-header.h

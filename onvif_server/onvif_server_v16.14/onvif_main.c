@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 
     soap_init(&soap);    
     if (argc < 2)
-        soap_serve(&soap);
+        onvif_serve(&soap);
     else
     {
         m = soap_bind(&soap, NULL, atoi(argv[1]), 100);
