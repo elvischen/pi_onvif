@@ -1,5 +1,10 @@
 #include "onvifStub.h"
 
+SOAP_FMAC5 int SOAP_FMAC6 SOAP_ENV__Fault(struct soap*, char *faultcode, char *faultstring, char *faultactor, struct SOAP_ENV__Detail *detail, struct SOAP_ENV__Code *SOAP_ENV__Code, struct SOAP_ENV__Reason *SOAP_ENV__Reason, char *SOAP_ENV__Node, char *SOAP_ENV__Role, struct SOAP_ENV__Detail *SOAP_ENV__Detail)
+{
+    return SOAP_OK;
+}
+
 /** Web service operation '__tds__GetServices' (returns SOAP_OK or error code) */
 SOAP_FMAC5 int SOAP_FMAC6 __tds__GetServices(struct soap *pSoap, struct _tds__GetServices *tds__GetServices, struct _tds__GetServicesResponse *tds__GetServicesResponse)
 {
